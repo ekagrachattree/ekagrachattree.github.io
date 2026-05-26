@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ground Water Depletion Study - IndoGangetic Plain</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html">Ekagra Chattree</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#one">About</a></li>
+                <li><a href="index.html#four">Projects</a></li>
+                <li><a href="index.html#footer">Get in Touch</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>Groundwater Depletion Study <br /> Indo-Gangetic Plain</h2>
+                <p>Remote Sensing · GRACE Satellite Data · Python · 2002–2026</p>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Objective</h3>
+                <p>To quantify groundwater storage depletion across the Indo-Gangetic Plain between 2002 and 2026 using NASA GRACE and GRACE-FO satellite gravity data, identify spatial hotspots of depletion at the pixel and district level, and assess the statistical significance of observed trends.</p>
+
+                <h3 class="major">Methodology</h3>
+                <p>Monthly Total Water Storage anomalies were extracted from the JPL RL06.3 GRACE/GRACE-FO mascon dataset covering 2002–2026. Surface water components, soil moisture across four depth layers, snow water equivalent, and canopy water, were removed using the GLDAS Noah 2.1 land surface model, isolating the groundwater storage signal. A linear regression and Mann-Kendall non-parametric trend test were applied to each 0.5° pixel independently to produce a significance-tested depletion rate map. Results were spatially aggregated to state boundaries using the GADM Level 1 shapefile. A 251-frame animation was compiled using FFmpeg to visualise the month-by-month evolution of groundwater anomaly from April 2002 to March 2026.</p>
+
+                <h3 class="major">Key Findings</h3>
+                <p>The IGP is losing groundwater at an average rate of −1.82 cm LWE per year across the plain. The worst-affected zone, centred on Punjab, Haryana, and the Uttarakhand foothills between 77–80°E, shows depletion rates of up to −9 cm LWE per year. At a typical alluvial aquifer specific yield of 0.15, this corresponds to approximately 12 cm of water table decline per year in the most affected districts. 504 of 558 pixels (90%) show statistically significant depletion at p < 0.05. The seasonal oscillations in the time series reflect annual monsoon recharge, but withdrawal for rabi wheat and kharif rice irrigation consistently outpaces recovery, pushing the annual floor lower each year.</p>
+
+                <h3 class="major">Tools & Data</h3>
+                <p>Python · GRACE/GRACE-FO JPL RL06.3 Mascon · GLDAS Noah V2.1 · Mann-Kendall Trend Test · Sen's Slope · Matplotlib</p>
+
+                <h3 class="major">Tools & Data</h3>
+                <p> The analysis uses 251 months of aligned GRACE–GLDAS data. The GRACE/GRACE-FO instrument gap (July 2017 – May 2018) was filled using linear interpolation across the bridge period. No scale factor correction was applied to the mascon product as the IGP region has a near-unity mean scale factor (0.98), making correction negligible for inland analysis.</p>
+
+                <h3 class="major">Animation</h3>
+                <p>Monthly evolution of groundwater storage anomaly across the plain, 2002–2026.</p>
+                <video width="100%" style="margin-bottom:2em; border-radius:6px;" controls autoplay loop muted>
+                    <source src="images/IndoGangeticPlain_Animation.mp4" type="video/mp4">
+                </video>
+
+                <h3 class="major">Time Series | Storage Anomaly 2002–2026</h3>
+                <p>Regional average groundwater storage anomaly over time, with a dashed trend line showing the −1.82 cm/year decline. The grey shaded band marks the GRACE–GRACE-FO data gap, which was interpolated.</p>
+                <img src="images/IndoGangeticPlain_timeseries.png" alt="Groundwater Storage Anomaly Time Series" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+
+                <h3 class="major">Trend Map</h3>
+                <p>Groundwater storage trend (cm LWE/year) across the Indo-Gangetic Plain. Red indicates depletion; blue indicates gain. Black dots mark statistically significant trends (MK p &lt; 0.05).</p>
+                <img src="images/IndoGangeticPlain_trend_map.png" alt="Groundwater Storage Trend Map" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+
+                <ul class="actions">
+                    <li><a href="index.html#four" class="button">← Back to Projects</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Ekagra Chattree. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
