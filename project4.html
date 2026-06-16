@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Urban Heat Island Analysis - Prayagraj</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html">Ekagra Chattree</a></h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#one">About</a></li>
+                <li><a href="index.html#four">Projects</a></li>
+                <li><a href="index.html#footer">Get in Touch</a></li>
+            </ul>
+            <a href="#" class="close">Close</a>
+        </div>
+    </nav>
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>Urban Heat Island Analysis of Prayagraj</h2>
+                <p>Remote Sensing &amp; GIS-Based Assessment of Surface Thermal Patterns During the 2026 North Indian Heatwave</p>
+                <p>Remote Sensing · GIS · Land Surface Temperature · NDVI · Python · QGIS · 2026</p>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div class="inner">
+
+                <h3 class="major">Abstract</h3>
+                <p>This study investigates the spatial distribution of Urban Heat Islands (UHI) across Prayagraj, Uttar Pradesh, India, using multi-sensor satellite remote sensing and geospatial analysis. Land Surface Temperature (LST) was derived from Landsat 9 Collection 2 Level-2 thermal data, and vegetation density was assessed using the Normalized Difference Vegetation Index (NDVI) computed from Sentinel-2 Level-2A imagery. Both datasets were acquired during the peak of the 2026 North Indian heatwave, one of the most intense heat events recorded in the region in over a century , providing a temporally critical and scientifically relevant observational window. The analysis employed 1 km² grid-based zonal statistics to characterize spatial variation in surface temperature and vegetation cover across the study area. Results demonstrate a statistically significant negative correlation between NDVI and LST (Pearson r = −0.386, p &lt; 0.001), confirming that vegetation cover exerts a measurable cooling influence on surface temperatures. Mean LST across the study area reached 45.7°C, with extreme hotspots recording values above 51°C in the dense northwestern urban core, while river channels of the Ganga and Yamuna registered temperatures as low as 38–39°C. The study provides spatial evidence in support of evidence-based urban greening interventions and contributes to the growing body of literature on UHI dynamics in rapidly urbanizing South Asian cities.</p>
+
+                <h3 class="major">Methodology</h3>
+                <p>NDVI was computed from Sentinel-2 Level-2A Band 4 (Red) and Band 8 (NIR) imagery, and LST was retrieved from Landsat 9 Collection 2 Level-2 ST_B10 using USGS scaling parameters. Both datasets were reprojected to UTM Zone 44N, clipped to the Prayagraj study boundary, and cloud-masked prior to analysis. A 1 km² fishnet grid was overlaid on the study area and zonal statistics (mean NDVI and mean LST) were extracted per cell. Pearson correlation and ordinary least-squares regression were applied across approximately 280 valid grid cells to quantify the NDVI–LST relationship.</p>
+
+                <h3 class="major">Key Findings</h3>
+                <ol>
+                    <li>Mean LST of 45.7°C was recorded across the study area, with extreme hotspots exceeding 51°C in the northwestern and northeastern bare riverbanks of the Ganga river, and minimum values of 34–35°C in river channels, an overall thermal range of approximately 18–19°C driven by land cover variation.</li>
+                    <li>A statistically significant negative correlation (Pearson r = −0.386, p &lt; 0.001) was confirmed between mean NDVI and mean LST across 1 km² grid cells. Each 0.10 increase in mean NDVI is associated with approximately 1.5–2.0°C reduction in mean LST.</li>
+                    <li>River cooling is real but spatially confined, the Ganga and Yamuna channels provide 10–13°C of cooling relative to adjacent built-up surfaces, but this effect is restricted to the water channel itself. The sandy reh land flanking both rivers records LST values of 46–49°C, comparable to the densest urban surfaces.</li>
+                    <li>The Prayagraj Cantonment demonstrates a persistent 6–9°C thermal advantage over the dense urban core, a direct, measurable consequence of its historically planned, vegetated, low-density urban fabric, providing empirical evidence that deliberate green urban planning delivers durable climate resilience over decadal timescales.</li>
+                </ol>
+
+                <h3 class="major">Tools &amp; Data</h3>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dataset / Software</th>
+                                <th>Provider / Version</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sentinel-2 Level-2A</td>
+                                <td>ESA Copernicus Data Space</td>
+                                <td>NDVI computation (B04, B08 at 10 m)</td>
+                            </tr>
+                            <tr>
+                                <td>Landsat 9 Collection 2 Level-2</td>
+                                <td>USGS EarthExplorer</td>
+                                <td>Land Surface Temperature retrieval (ST_B10 at 30 m)</td>
+                            </tr>
+                            <tr>
+                                <td>QGIS</td>
+                                <td>3.34 LTS</td>
+                                <td>Pre-processing, spatial analysis, map production</td>
+                            </tr>
+                            <tr>
+                                <td>Python · rasterio · numpy · scipy · matplotlib · geopandas</td>
+                                <td>3.10+</td>
+                                <td>LST conversion, NDVI calculation, statistical analysis, chart generation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="major">NDVI Map</h3>
+                <p>Classified NDVI map of Prayagraj derived from Sentinel-2 Level-2A imagery, peak summer 2026. Blue: water bodies; orange: bare soil/sand/built-up; yellow-green: sparse vegetation; medium green: moderate vegetation; dark green: dense vegetation. The Prayagraj Cantonment is identifiable as the concentrated dark green cluster in the west-central portion of the study area. Ganga (north) and Yamuna (south/west) rivers are clearly delineated in blue.</p>
+                <img src="images/04_NDVI_Map.png" alt="Classified NDVI Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">Land Surface Temperature Map</h3>
+                <p>Land Surface Temperature map of Prayagraj derived from Landsat 9 Collection 2 Level-2 ST_B10, peak summer 2026. Colour scale from blue (cool, ~34°C) through orange to deep red (hot, ~53°C). River channels of the Ganga and Yamuna are clearly visible as blue cooling corridors. The northwest and northeast bare riverbanks show persistent deep red temperatures. The Cantonment zone (centre-left) is distinguishable as a lighter thermal signature relative to adjacent dense urban areas.</p>
+                <img src="images/04_LST_Map.png" alt="Land Surface Temperature Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">LST Grid Map</h3>
+                <p>Mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each cell is labelled with its mean LST value in degrees Celsius. The northwest hotspot cluster (50–51°C cells) and the river cooling corridors (38–40°C cells) are directly readable from the labelled grid. The Cantonment zone is identifiable as the cooler cell cluster (41–43°C) in the west-central area.</p>
+                <img src="images/04_LST_Grid_Map.png" alt="Mean LST per 1 km² Grid Cell, Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">LST Frequency Distribution</h3>
+                <p>Frequency distribution of Land Surface Temperature pixel values across the Prayagraj study area, peak summer 2026. Mean (45.7°C) and median (45.3°C) are annotated. The pronounced high-temperature shoulder at 49–50°C reflects the thermal signature of the bare riverbanks.</p>
+                <img src="images/04_lst_histogram.png" alt="LST Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">NDVI Frequency Distribution</h3>
+                <p>Frequency distribution of NDVI pixel values across the Prayagraj study area, peak summer 2026. The mean NDVI of approximately 0.15 falls at the boundary between sparse and moderate vegetation classes, confirming the overwhelmingly low-vegetation character of the urban surface during peak summer.</p>
+                <img src="images/04_ndvi_distribution.png" alt="NDVI Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">NDVI vs LST Scatter Plot</h3>
+                <p>Scatter plot of mean NDVI versus mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each point represents one grid cell. The linear regression line confirms a negative relationship between vegetation density and surface temperature. Pearson r = −0.386, p &lt; 0.001 (n ≈ 280 grid cells).</p>
+                <img src="images/04_ndvi_vs_lst_scatter.png" alt="NDVI vs LST Scatter Plot with Regression Line" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">Skills Demonstrated</h3>
+                <ul>
+                    <li>Satellite remote sensing: Sentinel-2 and Landsat 9 data acquisition and processing</li>
+                    <li>Land Surface Temperature retrieval using USGS Collection 2 scaling methodology</li>
+                    <li>NDVI computation, classification, and interpretation</li>
+                    <li>Raster pre-processing: reprojection, clipping, cloud masking</li>
+                    <li>Grid-based zonal statistics and spatial aggregation</li>
+                    <li>Pearson correlation and ordinary least-squares regression analysis</li>
+                    <li>Python scripting for geospatial raster processing and scientific visualization</li>
+                    <li>Cartographic design and thematic map production in QGIS</li>
+                    <li>Urban climate analysis and scientific interpretation</li>
+                </ul>
+
+                <ul class="actions">
+                    <li><a href="index.html#four" class="button">← Back to Projects</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <ul class="copyright">
+                <li>&copy; Ekagra Chattree. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
