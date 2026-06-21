@@ -56,7 +56,35 @@
                 <h3 class="major">Methodology</h3>
                 <p>NDVI was computed from Sentinel-2 Level-2A Band 4 (Red) and Band 8 (NIR) imagery, and LST was retrieved from Landsat 9 Collection 2 Level-2 ST_B10 using USGS scaling parameters. Both datasets were reprojected to UTM Zone 44N, clipped to the Prayagraj study boundary, and cloud-masked prior to analysis. A 1 km² fishnet grid was overlaid on the study area and zonal statistics (mean NDVI and mean LST) were extracted per cell. Pearson correlation and ordinary least-squares regression were applied across approximately 280 valid grid cells to quantify the NDVI–LST relationship.</p>
 
-                <h3 class="major">Key Findings</h3>
+              
+
+               
+
+                <h3 class="major">NDVI Map</h3>
+                <p>Classified NDVI map of Prayagraj derived from Sentinel-2 Level-2A imagery, peak summer 2026. Blue: water bodies; orange: bare soil/sand/built-up; yellow-green: sparse vegetation; medium green: moderate vegetation; dark green: dense vegetation. The Prayagraj Cantonment is identifiable as the concentrated dark green cluster in the west-central portion of the study area. Ganga (north) and Yamuna (south/west) rivers are clearly delineated in blue.</p>
+                <img src="images/04_NDVI_Map.png" alt="Classified NDVI Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">Land Surface Temperature Map</h3>
+                <p>Land Surface Temperature map of Prayagraj derived from Landsat 9 Collection 2 Level-2 ST_B10, peak summer 2026. Colour scale from blue (cool, ~34°C) through orange to deep red (hot, ~53°C). River channels of the Ganga and Yamuna are clearly visible as blue cooling corridors. The northwest and northeast bare riverbanks show persistent deep red temperatures. The Cantonment zone (centre-left) is distinguishable as a lighter thermal signature relative to adjacent dense urban areas.</p>
+                <img src="images/04_LST_Map.png" alt="Land Surface Temperature Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">LST Grid Map</h3>
+                <p>Mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each cell is labelled with its mean LST value in degrees Celsius. The northwest hotspot cluster (50–51°C cells) and the river cooling corridors (38–40°C cells) are directly readable from the labelled grid. The Cantonment zone is identifiable as the cooler cell cluster (41–43°C) in the west-central area.</p>
+                <img src="images/04_LST_Grid_Map.png" alt="Mean LST per 1 km² Grid Cell, Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">LST Frequency Distribution</h3>
+                <p>Frequency distribution of Land Surface Temperature pixel values across the Prayagraj study area, peak summer 2026. Mean (45.7°C) and median (45.3°C) are annotated. The pronounced high-temperature shoulder at 49–50°C reflects the thermal signature of the bare riverbanks.</p>
+                <img src="images/04_lst_histogram.png" alt="LST Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">NDVI Frequency Distribution</h3>
+                <p>Frequency distribution of NDVI pixel values across the Prayagraj study area, peak summer 2026. The mean NDVI of approximately 0.15 falls at the boundary between sparse and moderate vegetation classes, confirming the overwhelmingly low-vegetation character of the urban surface during peak summer.</p>
+                <img src="images/04_ndvi_distribution.png" alt="NDVI Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+
+                <h3 class="major">NDVI vs LST Scatter Plot</h3>
+                <p>Scatter plot of mean NDVI versus mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each point represents one grid cell. The linear regression line confirms a negative relationship between vegetation density and surface temperature. Pearson r = −0.386, p &lt; 0.001 (n ≈ 280 grid cells).</p>
+                <img src="images/04_ndvi_vs_lst_scatter.png" alt="NDVI vs LST Scatter Plot with Regression Line" style="width:100%; border-radius:6px; margin-bottom:2em;" />
+ 
+				<h3 class="major">Key Findings</h3>
                 <ol>
                     <li>Mean LST of 45.7°C was recorded across the study area, with extreme hotspots exceeding 51°C in the northwestern and northeastern bare riverbanks of the Ganga river, and minimum values of 34–35°C in river channels, an overall thermal range of approximately 18–19°C driven by land cover variation.</li>
                     <li>A statistically significant negative correlation (Pearson r = −0.386, p &lt; 0.001) was confirmed between mean NDVI and mean LST across 1 km² grid cells. Each 0.10 increase in mean NDVI is associated with approximately 1.5–2.0°C reduction in mean LST.</li>
@@ -64,7 +92,8 @@
                     <li>The Prayagraj Cantonment demonstrates a persistent 6–9°C thermal advantage over the dense urban core, a direct, measurable consequence of its historically planned, vegetated, low-density urban fabric, providing empirical evidence that deliberate green urban planning delivers durable climate resilience over decadal timescales.</li>
                 </ol>
 
-                <h3 class="major">Tools &amp; Data</h3>
+
+				<h3 class="major">Tools &amp; Data</h3>
 
                 <div class="table-wrapper">
                     <table>
@@ -99,31 +128,7 @@
                         </tbody>
                     </table>
                 </div>
-
-                <h3 class="major">NDVI Map</h3>
-                <p>Classified NDVI map of Prayagraj derived from Sentinel-2 Level-2A imagery, peak summer 2026. Blue: water bodies; orange: bare soil/sand/built-up; yellow-green: sparse vegetation; medium green: moderate vegetation; dark green: dense vegetation. The Prayagraj Cantonment is identifiable as the concentrated dark green cluster in the west-central portion of the study area. Ganga (north) and Yamuna (south/west) rivers are clearly delineated in blue.</p>
-                <img src="images/04_NDVI_Map.png" alt="Classified NDVI Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
-                <h3 class="major">Land Surface Temperature Map</h3>
-                <p>Land Surface Temperature map of Prayagraj derived from Landsat 9 Collection 2 Level-2 ST_B10, peak summer 2026. Colour scale from blue (cool, ~34°C) through orange to deep red (hot, ~53°C). River channels of the Ganga and Yamuna are clearly visible as blue cooling corridors. The northwest and northeast bare riverbanks show persistent deep red temperatures. The Cantonment zone (centre-left) is distinguishable as a lighter thermal signature relative to adjacent dense urban areas.</p>
-                <img src="images/04_LST_Map.png" alt="Land Surface Temperature Map of Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
-                <h3 class="major">LST Grid Map</h3>
-                <p>Mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each cell is labelled with its mean LST value in degrees Celsius. The northwest hotspot cluster (50–51°C cells) and the river cooling corridors (38–40°C cells) are directly readable from the labelled grid. The Cantonment zone is identifiable as the cooler cell cluster (41–43°C) in the west-central area.</p>
-                <img src="images/04_LST_Grid_Map.png" alt="Mean LST per 1 km² Grid Cell, Prayagraj" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
-                <h3 class="major">LST Frequency Distribution</h3>
-                <p>Frequency distribution of Land Surface Temperature pixel values across the Prayagraj study area, peak summer 2026. Mean (45.7°C) and median (45.3°C) are annotated. The pronounced high-temperature shoulder at 49–50°C reflects the thermal signature of the bare riverbanks.</p>
-                <img src="images/04_lst_histogram.png" alt="LST Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
-                <h3 class="major">NDVI Frequency Distribution</h3>
-                <p>Frequency distribution of NDVI pixel values across the Prayagraj study area, peak summer 2026. The mean NDVI of approximately 0.15 falls at the boundary between sparse and moderate vegetation classes, confirming the overwhelmingly low-vegetation character of the urban surface during peak summer.</p>
-                <img src="images/04_ndvi_distribution.png" alt="NDVI Frequency Distribution Histogram" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
-                <h3 class="major">NDVI vs LST Scatter Plot</h3>
-                <p>Scatter plot of mean NDVI versus mean Land Surface Temperature per 1 km² grid cell across Prayagraj, peak summer 2026. Each point represents one grid cell. The linear regression line confirms a negative relationship between vegetation density and surface temperature. Pearson r = −0.386, p &lt; 0.001 (n ≈ 280 grid cells).</p>
-                <img src="images/04_ndvi_vs_lst_scatter.png" alt="NDVI vs LST Scatter Plot with Regression Line" style="width:100%; border-radius:6px; margin-bottom:2em;" />
-
+				
                 <h3 class="major">Skills Demonstrated</h3>
                 <ul>
                     <li>Satellite remote sensing: Sentinel-2 and Landsat 9 data acquisition and processing</li>
